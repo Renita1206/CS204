@@ -1,0 +1,27 @@
+html{
+    border-style: dashed;
+    border-color: rgb(58, 14, 128);
+    border-width: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.p1
+{
+    color:blueviolet;
+    border-style: dashed;
+    border-color: blue;
+    border-width: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.p1:hover{
+    color:rgb(226, 43, 43);   
+    font-size: large;
+    font-weight: bold;
+}
+
+.p1::first-letter{
+    color:rgb(10, 47, 104);
+    font-size: large;
+}

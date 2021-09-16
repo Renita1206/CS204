@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Button</title>
+    </head>
+    <body>
+        
+        <p class="demo">hello world</p>
+        <br>
+        <button class="btn" onclick="Func()">Click Me</button>
+        <script>
+            var k=0;
+            var colors=["red","blue","black","green"];
+            var size=["10px","20px","30px","40px"];
+            function Func()
+            {
+                var x;
+                x=document.querySelectorAll(".demo");
+                for(var i=0;i<x.length;i++)
+                    {
+                        x[i].style.color=colors[k];
+                        x[i].style.fontSize=size[k];
+                        x[i].style.fontStyle="normal";
+                    }
+                    k+=1;
+                    if(k==4)
+                        k=0;
+            }
+        </script>
+    </body>
+</html>
+
+<!-- 
+    use query selecterall change font color, size and style
+    3 para , 2 headers 
+    <h3  class="demo">Something else</h3>
+    <p class="demo">Hi</p>
+    <p class="demo">Something</p>
+    <h3 class="demo">Something else</h3>
+-->
+
+<!--
+    node.appendChild() - add node as last child of parent element
+    node.insertBefore() - Insert a node into the parent before a specific sibling node
+    node.replaceChild() - replace existing node with new node
+    node.removeChild() - removes child node
+    node.remove() - removes a node
+
+    document.createElement()  - create new element
+    document.createTextNode() - creates a new text node
+-->

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Cube</title>
+    </head>
+    <body>
+        <h3 id="c"> </h3>
+        <br>
+        
+        <script>
+            function cube(a)
+            {
+                return a*a*a;
+            }
+            var a = prompt("Enter a number: ");
+            a=parseInt(a);
+            var result = cube(a);
+            document.getElementById("c").innerHTML= result;
+        </script>
+    </body>
+</html>

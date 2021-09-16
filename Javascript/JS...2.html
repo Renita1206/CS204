@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Addition and Swapping Numbers</title>
+    </head>
+    <body>
+        <p>Addition: <h3 id="add"> </h3></p>
+        <br>
+        <h3>Before Swap: </h3>
+        <p id="before"> </p>
+        <h3>After Swap: </h3>
+        <p id="after" ></p>
+        
+        <script>
+            var a = prompt("Enter a number: ");
+            var b = prompt("Enter a number: ");
+            a=parseInt(a);
+            b=parseInt(b);
+            document.getElementById("add").innerHTML= a+b;
+            document.getElementById("before").innerHTML = (a+" "+b);
+            var tmp = a;
+            a = b;
+            b=tmp;
+            document.getElementById("after").innerHTML=(a+" "+b);
+            console.log("No errors");
+            document.write("Something"+"<br/>" + "Something else");
+            alert("ALERT");
+            //4 ways for output ->document.write, getelementbyID, alert box and console.log
+        </script>
+    </body>
+</html>

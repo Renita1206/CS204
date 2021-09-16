@@ -1,0 +1,57 @@
+.heading
+{
+    font-family:monospace;
+    color:blue;
+    font-size: 50px;
+    background-color: rgb(236, 175, 8);
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 50px;
+}
+
+.btn
+{
+    font-family: monospace;
+    color:blue;
+    background-color:  rgb(236, 175, 8);
+    text-align: center;
+    font-size: 15px;
+    border-color: blue;
+    border-radius: 5%;
+    border-width: 2px;
+    padding: 10px;
+    margin-left: 150px;
+    align-content: center;
+}
+
+.btn:hover
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h3
+{
+    font-family:monospace;
+    color:blue;
+    font-size: 30px;   
+}
+
+.btn1
+{
+    font-family: monospace;
+    color:blue;
+    background-color:  rgb(236, 175, 8);
+    text-align: center;
+    font-size: 12px;
+    border-color: blue;
+    border-radius: 5%;
+    border-width: 2px;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.btn1:hover
+{
+    font-weight: bold;
+}

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS</title>
+        <script>
+            var a=10;
+            document.write(a);
+            function something()
+            {
+                document.write("Inside function\n");
+                window.b=15;
+            }
+
+            function ifelse()
+            {
+                var x = 25;
+                if(x>0)
+                {
+                    document.write("Positive");
+                }
+                else
+                {
+                    document.write("Negative");
+                }
+            }
+            something();
+            ifelse();
+            document.write(window.b);
+            //alert("ALERT");
+            //open("www.amazon.com");
+            //confirm("Confirm");
+            function c()
+            {
+                confirm("Do you want to close?");
+                close();
+            }
+            //close
+        </script>
+    </head>
+    <body>
+        <h3>Javascript</h3>
+        <input type="button" value="close" onclick="c()">
+    </body>
+</html>

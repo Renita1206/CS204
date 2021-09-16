@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <h3 id="h">Hello world</h3>>
+
+        <script>
+            var parent = document.getElementsByTagName(body);
+            var child = document.getElementById("h");
+            var h = document.createElement("h3");
+            var node = document.createTextNode("New header");
+            h.appendChild(node);
+            parent.replaceChild(h,child);
+        </script>
+
+    </body>
+</html>
+
+<!--
+    Something is wrong!
+-->

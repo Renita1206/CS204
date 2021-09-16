@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Testing Procedure Template</title>
+    </head>
+    <body style="background-color: rgb(215, 243, 243);">
+        <center>
+            <h2 style="color: black; font-size: larger; font-family: Georgia; font-style: italic;">Test Procedure Template</h2>
+        <table style="width: 75%; border-collapse: collapse; border: 5px solid black; text-align: center;" cellpadding="5px" cellspacing="2px">
+            <caption>Test Template</caption>
+            <tr style="background-color:rgb(158, 216, 243); border: 2px solid black;">
+                <th>S. no</th>
+                <th>Test Name</th>
+                <th>Test Type</th>
+                <th>Test Date</th>
+                <th>Priority</th>
+                <th>Expected Result</th>
+                <th>Test Result</th>
+                <th>Comments</th>
+            </tr>
+            <tr style="border: 1px solid black; ">
+                <td>1</td>
+                <td>ABC</td>
+                <td>B</td>
+                <td>12/09/21</td>
+                <td>High</td>
+                <td>Pass</td>
+                <td>Pass</td>
+                <td>-</td>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <td>2</td>
+                <td>CDE</td>
+                <td>A</td>
+                <td>14/09/21</td>
+                <td>High</td>
+                <td>Fail</td>
+                <td>Fail</td>
+                <td>-</td>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <td>3</td>
+                <td>QWE</td>
+                <td>C</td>
+                <td>15/09/21</td>
+                <td>Low</td>
+                <td>Pass</td>
+                <td>Pass</td>
+                <td>-</td>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <td>4</td>
+                <td>PQR</td>
+                <td>B</td>
+                <td>16/09/21</td>
+                <td>Medium</td>
+                <td>Fail</td>
+                <td>Pass</td>
+                <td>-</td>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <td>5</td>
+                <td>XYZ</td>
+                <td>A</td>
+                <td>16/09/21</td>
+                <td>Low</td>
+                <td>Pass</td>
+                <td>Fail</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </center>
+
+    <br>
+    <br>
+    <br>
+
+    <h4 style="color: black; font-family: Georgia; font-style: italic;">Tests Conducted: </h4>
+    <ol>
+        <li>ABC</li>
+        <li>CDE</li>
+        <li>QWE</li>
+        <li>PQR</li>
+        <li>XYZ</li>
+    </ol>
+
+    <br>
+    <br>
+    <br>
+
+    <center>
+    <img height="100px" width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxZ5YMd9is-zZfIweCeNLLo9-G32AqxBVsdA&usqp=CAU" alt="oneplus buds picture">
+    <br>
+    <a href="https://www.oneplus.in/product/oneplus-buds">Link to product page</a>
+    </center>
+
+    <p id="Date" style="position: absolute; bottom: 20; right:20;"></p>
+    <script>
+        var n,y,m,d,h,min;
+        n =  new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        h=n.getHours();
+        min=n.getMinutes();
+        document.getElementById("Date").innerHTML ="Date: "+ d + "/" + m + "/" + y +"   Time: "+h+":"+min;
+    </script>
+    </body>
+</html>

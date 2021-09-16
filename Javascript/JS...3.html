@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Largest Number</title>
+    </head>
+    <body>
+        <h3 id="max"> </h3>
+        <br>
+        
+        <script>
+            var a = prompt("Enter a number: ");
+            var b = prompt("Enter a number: ");
+            var c = prompt("Enter a number: ");
+            a=parseInt(a);
+            b=parseInt(b);
+            c=parseInt(c);
+            var m=0;
+            if(a>b)
+            {
+                if(a>c)
+                    m=a
+                else
+                    m=c;
+            }
+            else
+            {
+                if(b>c)
+                    m=b;
+                else
+                    m=c;
+            }
+
+            document.getElementById("max").innerHTML= m + " is the greatest";
+
+        </script>
+    </body>
+</html>
