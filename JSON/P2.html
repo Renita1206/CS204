@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h2>Access a Javascript Object</h2>
+        <p id="demo"></p>
+
+        <script>
+            var str = '{name:"John", age:30, city:"NY"}';
+            var obj=JSON.parse(str);
+            //document.getElementById("demo").innerHTML = obj.name;
+            obj.s="ABC";
+            str=JSON.stringify(obj);
+            
+            document.getElementById("demo").innerHTML = str;
+        </script>
+    </body>
+</html>
