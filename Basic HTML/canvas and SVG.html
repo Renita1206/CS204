@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <canvas id="canv" width="500" height="500" style="border: 1px solid black;"></canvas>
+        <br>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="pink"/>
+        </svg>
+        <svg width="200" height="100">
+            <rect width="200" height="100" stroke="pink" stroke-width="5" fill="aqua"/>
+        </svg>
+        <script>
+            var c = document.getElementById("canv");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0,0);
+            ctx.lineTo(500,500);
+            ctx.stroke();
+
+            ctx.moveTo(50,50);
+            ctx.beginPath();
+            ctx.arc(150,150,50,0,2*Math.PI);
+            ctx.stroke();
+            ctx.fillStyle = "blue";
+            ctx.font = "30px Arial";
+            ctx.fillText("Hello world!",100,400);
+
+
+        </script>
+    </body>
+</html>
+
+<!--
+            ctx.rect(100,100,125,125);
+    SVG - ellpise, polygon, text
+-->
