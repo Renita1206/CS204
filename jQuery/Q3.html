@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function loop()
+            {
+                for(var i=0;i<=100000000000;i++)
+                {
+                    var j=i;
+                }
+                alert("Completed iterations");
+            }
+
+            function hello()
+            {
+                alert("Hello World");
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="loop()">Loop</button> 
+        <button onclick="hello()">Hello</button> 
+    </body>
+</html>
+
+<!--
+    Freezes on calling loop function
+-->
