@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script type="text/babel">
+            
+            class A extends React.Component{
+                render(){
+                    console.log(this.props);
+                    return(
+                        <div>
+                            <h1>Hello {this.props.name}</h1>
+                        </div>
+                    );
+                }
+            }
+
+            ReactDOM.render(<A name="nihal"/>, document.getElementById("root"));
+        </script>
+    </body>
+</html>
