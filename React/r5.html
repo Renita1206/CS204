@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script type="text/babel">
+            
+            function App(){
+                function click(){
+                    //this.state={message:"Riya is good"};
+                    console.log("button clicked");
+                }
+
+                return (
+                        <div>
+                            <h1 fontSize="10">Hello World</h1>
+                            <button className="btn" onClick={click}>Click Me</button>
+                        </div>
+                );
+            }
+
+            ReactDOM.render(<App/>, document.getElementById("root"));
+        </script>
+    </body>
+</html>
