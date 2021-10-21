@@ -12,13 +12,13 @@
             class App extends React.Component{
                 constructor(props){
                     super(props);
-                    this.state={message:"lived"};
+                    this.state={message:"Hi"};
                 }
-                click=()=>{
-                    if(this.state.message=="lived")
-                        this.setState({message:"died"});
+                hover=()=>{
+                    if(this.state.message=="Hi")
+                        this.setState({message:"Bye"});
                     else
-                        this.setState({message:"lived"});
+                        this.setState({message:"Hi"});
                     console.log("Clicked");
 
                 }
@@ -26,8 +26,7 @@
                 render(){
                     return(
                         <div>
-                            <h1 fontSize="10">The boy who {this.state.message}</h1>
-                            <button className="btn" onClick={this.click}>Click Me</button>
+                            <h1 onMouseOver={this.hover}>{this.state.message}</h1>
                         </div>
                     );
                 }
