@@ -12,21 +12,24 @@
             class App extends React.Component{
                 constructor(props){
                     super(props);
-                    this.state={message:"Rantac"};
+                    this.state={message:"A"};
                 }
                 hover=()=>{
-                    if(this.state.message=="Rantac")
-                        this.setState({message:"Rinita"});
+                    if(this.state.message=="E")
+                        this.setState({message:"A"});
                     else
-                        this.setState({message:"Rantac"});
+                        this.setState({message:"E"});
                     console.log("Clicked");
 
                 }
 
                 render(){
+                    const mystyle={
+                        color:"Green"
+                    };
                     return(
                         <div>
-                            <h1 style={{color:"red"}} onMouseOver={this.hover}>{this.state.message}</h1>
+                            <h1 style={mystyle} onMouseOver={this.hover}>{this.state.message}</h1>
                         </div>
                     );
                 }
