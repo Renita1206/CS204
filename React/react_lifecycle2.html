@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script type="text/babel">
+            
+            class App extends React.Component{
+                constructor(props){
+                    super(props);
+                    this.state={color:"red"};
+                    this.inputRef=React.createRef();
+                    console.log("Constructor");
+                }
+
+                shouldComponentUpdate(){
+                    return true;
+                }
+
+                componentDidMount(){
+                    this.inputRef.current.focus();
+                }
+
+                changeColor =() => {
+                    this.setState({color:"blue"});
+                }
+
+                render(){
+                    return(
+                        <div>
+                            <h1 font-color="{this.state.color}">{this.state.color}</h1>
+                            <input type="text" ref={this.inputRef}/>
+                            <input type="text"/>
+                            <button className="btn" onClick={this.changeColor}>Click Me</button>
+                            </div>
+                    )
+                }
+
+            }
+
+            ReactDOM.render(<App/>, document.getElementById("root"));
+        </script>
+    </body>
+</html>

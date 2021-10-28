@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script type="text/babel">
+            
+            class App extends React.Component{
+                constructor(props){
+                    super(props);
+                    this.state={message:"lived"};
+                }
+                click=()=>{
+                    if(this.state.message=="lived")
+                        this.setState({message:"died"});
+                    else
+                        this.setState({message:"lived"});
+                    console.log("Clicked");
+                }
+
+                something=()=>{
+                    this.setState({message:"IDK"});
+                    console.log("Something");
+                }
+
+                render(){
+                    return(
+                        <div>
+                            <h1 fontSize="10">The boy who {this.state.message}</h1>
+                            <form>
+                                <label for="name">Enter your Name</label><br/>
+                                <input type="text" name="name" onChange={this.something}/>
+                            </form>
+                            <button className="btn" onClick={this.click}>Click Me</button>
+                        </div>
+                    );
+                }
+            }
+
+            ReactDOM.render(<App/>, document.getElementById("root"));
+        </script>
+    </body>
+</html>
