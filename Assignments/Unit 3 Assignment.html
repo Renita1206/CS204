@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+    <body style="background-color: rgb(199, 245, 255);">
+        <center>
+        <h1>Order Summary</h1>
+        <table style="background-color: rgb(128, 230, 253);" border="5px" width="75%">
+            <tr>
+                <td id="P1" width="25%"></td>
+                <td id="P2" width="25%"></td>
+                <td id="P3" width="25%"></td>
+            </tr>
+        </table>
+        </center>
+        <div id="total" ></div>
+        <script type="text/babel">
+            var total=0;
+            class Product extends React.Component
+            {
+	            constructor(props)
+                {
+                    super(props)
+                    this.state={
+                        name: props.name, description: props.desc, quantity: 0, price: props.price
+                    };
+                }
+                clickHandler=()=>{
+                    this.setState({quantity:this.state.quantity+1});
+                    total+=this.state.price;
+                    console.log(total);
+                }
+                render(){
+                    return(
+                            <div>
+                                <h2>{this.state.name}</h2>
+                                <p>Description: {this.state.description}</p>
+                                <h4>Price: {this.state.price} INR</h4>
+                                <h4>Quantity: {this.state.quantity}</h4>
+                                <center><button onClick={this.clickHandler}> Add </button></center>
+                            </div>
+                    );
+                }
+            }
+            ReactDOM.render(<Product name="Bose 700" desc="Bose Noise Cancelling Wireless Bluetooth Headphones 700, with Alexa Voice Control, Black" price={35000} />,document.getElementById('P1'));
+            ReactDOM.render(<Product name="Sony WH-1000XM4 " desc="Sony WH-1000XM4 Industry Leading Wireless Noise Cancellation Headphones, Bluetooth Headset with Mic for Phone Calls, 30 Hrs Battery Life, Quick Charge, WFH, Touch Control, Alexa Voice Control (Black)" price={27000} />,document.getElementById('P2'));
+            ReactDOM.render(<Product name="Shure AONIC 50  " desc="Shure AONIC 50 Wireless Noise Canceling Headphones, Premium Studio Quality Sound, Bluetooth 5 Wireless Technology, Comfortable Over-Ear Fit, 20 Hours of Battery Life, Finger Controls - White" price={28000} />,document.getElementById('P3'));
+            
+            class Total extends React.Component
+            {
+                constructor(props)
+                {
+                    super(props)
+                    this.state={
+                        total_amt: total
+                    };
+                }
+
+                componentDidMount() {
+                    this.interval = setInterval(() => this.changeTotal(), 100);
+                }
+
+                componentWillUnmount() {
+                    clearInterval(this.interval);
+                }
+                
+                changeTotal=()=>{
+                    this.setState({total_amt:total});
+                }
+
+                render(){
+                    return(
+                        <h2>Total: {this.state.total_amt} INR</h2>
+                    );
+                }
+            }
+            ReactDOM.render(<Total total_amt= {total} />,document.getElementById('total'));
+        </script>
+    </body>
+</html>
